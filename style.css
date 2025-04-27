@@ -1,0 +1,194 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
+.bg{
+    width: 95%;
+    height: 500px;
+    border-radius: 1%;
+    margin: 10px;
+    margin-left: 2%;
+    
+}
+.bgtext{
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    left: 24%;
+    
+    color: white;
+}
+
+.bg-slide{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10%;
+    padding-right: 10%;
+    position: absolute;
+    top: 50%;
+    gap: 1000px;
+    left: 7%;
+    
+}
+
+.brand{
+    display: flex;
+    justify-content: space-around;
+    
+}
+.brandimg{
+    width: 10%;
+    height: 30%;
+   
+}
+
+.textcontainer{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 10px;
+}
+
+.text-section{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.product-text{
+    background-color: rgb(164, 158, 158);
+    color: black;
+    width: 300px;
+    height: 150px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.dress-card{
+    width: 17%;
+    height: 300px;
+    position: relative;
+   
+}
+.dress-card img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    margin: 10px;
+    
+}
+.dress-card button{
+    border-radius: 5px;
+    position: absolute;
+    padding: 10px;
+    top: 45%;
+    left: 35%;
+}
+
+.new-arrival{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    flex-grow: 1;
+}
+.mostwanted-dress{
+    width: 17%;
+    height: 300px;
+    position: relative;
+}
+.mostwanted-dress img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    margin: 10px;
+    border: solid black 1px;
+}
+.mostwanted-dress p{
+    position: absolute;
+    background-color: red;
+    color: white;
+    padding: 15px;
+    top: 3%;
+    font-weight: bold;
+    border-radius: 5px;
+    left: 4%;
+}
+.wanted-collection{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.limited-offer{
+    width: 100%;
+    height: 350px;
+    background-color: rgb(43, 14, 69);
+    margin-top: 25px;
+
+}
+.offer{
+    width: 25%;
+    height: 180px;
+    position: relative;
+}
+.offer img{
+    margin-left: 300px;
+    position: absolute;
+    top: 25%;
+
+}
+.offer-section{
+    margin-left: 800px;
+}
+.offer-section button{
+    border-radius: 5px;
+    background-color: white;
+    padding: 10px;
+    margin-top: 10px;
+    
+}
+.offer-section p{
+    margin-top: 10px;
+}
+
+.letter-section{
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.letter-section p{
+    margin-top: 10px;
+}
+
+.letter button{
+    border-radius: 5px;
+    background-color: rgb(43, 14, 69);
+    color: white;
+    padding: 15px;
+    margin-top: 10px;
+    margin-left: 725px;
+   
+}
+
+.footer-section{
+    background-color: rgb(43, 14, 69);
+    width: 100%;
+    height: 290px;
+    margin-top: 10px;
+}
+.footer-sectiontwo{
+    display: flex;
+  
+}
+.icons{
+    padding: 10px;
+    display: flex;
+    margin-left: 10px;
+    padding-right: 20px;
+}
