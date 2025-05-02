@@ -4,7 +4,9 @@ body{
 }
 
 
-
+#navbar{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
 .bg{
     width: 95%;
@@ -73,12 +75,14 @@ body{
     width: 17%;
     height: 300px;
     position: relative;
+
+    
    
 }
 .dress-card img{
     width: 100%;
     height: 100%;
-    border-radius: 5px;
+    border-radius: 10px;
     margin: 10px;
     
 }
@@ -92,20 +96,21 @@ body{
 
 .new-arrival{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin: 10px;
     flex-grow: 1;
 }
-.mostwanted-dress{
-    width: 17%;
-    height: 300px;
-    position: relative;
-}
+
+
+/* m W */
+
+
 .mostwanted-dress img{
     width: 100%;
     height: 100%;
     border-radius: 5px;
     margin: 10px;
+
     border: solid black 1px;
 }
 .mostwanted-dress p{
@@ -120,11 +125,45 @@ body{
 }
 .wanted-collection{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin: 10px;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    gap: 30px;
+    height: 330px;
+}
+.wanted-collection::-webkit-scrollbar{
+    width: 0;
+
+    
+    /* height: 0; */
+}
+.mostwanted-dress{
+    width: 17%;
+    height: 300px;
+    flex: 0 0 auto;
+   
+    position: relative;
+}
+
+
+
+.likebutton{
+    position: absolute;
+    top: 250px;
+    left: 200px;
+    z-index: 1;
+    font-size: 2vw;
+}
+.fillempty {
+    display: none;
+    color: red;
 }
 
 .limited-offer{
+
     width: 100%;
     height: 350px;
     background-color: rgb(43, 14, 69);
@@ -192,3 +231,84 @@ body{
     margin-left: 10px;
     padding-right: 20px;
 }
+
+
+
+/* Collections  */
+
+.product-section {
+    margin: 20px;
+    border: solid black 2px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#product-search {
+    width: 80%;
+    border-radius: 20px;
+    border: none;
+    padding: 10px;
+    outline: none;
+}
+
+.filters {
+    background-color: grey;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.filters button {
+    padding-left: 25px;
+    padding-right: 25px;
+    margin: 20px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: rgb(85, 37, 126);
+    color: white;
+    font-size: medium;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+}
+
+.filters button:hover {
+    cursor: pointer;
+    background-color: rgb(43, 14, 69);
+}
+
+.products{
+    display: flex;
+    margin-top: 30px;
+    gap: 10px;
+    padding: 10px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+   
+}
+
+.product-box{
+    flex-basis: 20%;
+    width: 17%;
+    height: 350px;
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 40px;
+}
+.product-box p{
+    margin-top: 5px;
+}
+
+
+/* ul li a:hover{
+    color: blueviolet;
+} */

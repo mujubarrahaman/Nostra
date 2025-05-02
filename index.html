@@ -21,13 +21,19 @@
 
 <body>
 
-    <nav class="flex justify-between">
+    <!-- Responsive Nav Bar -->
+
+    <nav class="flex justify-between items-center">
         <h1 class="p-5 font-bold text-2xl">Nostra</h1>
 
+        <svg id="menuicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 w-5 h-6 m-5 md:hidden">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+          
 
-        <ul class="flex gap-20 p-5 mr-8 text-gray-600">
+        <ul class="flex gap-20 p-5 mr-8 text-gray-600 hidden md:flex">
             <li>
-                <a class=" hover:underline hover:text-black " href="#">Home</a>
+                <a class=" hover:underline hover:text-black " href="index.html">Home</a>
             </li>
 
             <li>
@@ -39,7 +45,7 @@
             </li>
 
             <li>
-                <a class=" hover:underline hover:text-black " href="#">Collection</a>
+                <a class=" hover:underline hover:text-black " href="collections.html">Collection</a>
             </li>
 
             <li>
@@ -48,9 +54,39 @@
         </ul>
     </nav>
 
+    <!-- Side Nav bar -->
+
+    <section id="sidenav" class="bg-black fixed z-20  top-0 transition-all duration-1000 " style="width: 50%; height: 100vh; left: -50%;">
+
+        <div class="text-right text-white p-5 ">
+            <p id="closenav" class="inline cursor-pointer">X</p>
+        </div>
+        <ul class="flex flex-col items-center gap-10  p-5 mr-8 text-gray-400   " style="" >
+            <li>
+                <a class=" hover:underline hover:text-white " href="#">Home</a>
+            </li>
+
+            <li>
+                <a class=" hover:underline hover:text-white " href="#">New Arrival</a>
+            </li>
+
+            <li>
+                <a class="hover:underline hover:text-white " href="#">Most Wanted</a>
+            </li>
+
+            <li>
+                <a class=" hover:underline hover:text-white " href="collections.html">Collections</a>
+            </li>
+
+            <li>
+                <a class=" hover:underline hover:text-white " href="contact.html">Contact Us</a>
+            </li>
+        </ul>
+    </section>
+
     <div class="bg-image">
 
-        <img src="photo1.jpg" alt="" class="bg">
+        <img src="baner2.jpg" alt="" class="bg">
 
         <div class="bg-slide">
             <i class="fa-solid fa-chevron-left" style="color: #ffffff;  cursor: pointer;"></i>
@@ -134,22 +170,27 @@
 
 
             <div class="dress-card">
-                <img class="dress-collections" src="./New Arrivals/d1.jpg" alt="">
+                <img class="dress-collections" src="A1.webp" alt="">
                 <button class="mt-5 bg-white text-black p-2 font-bold ">Shop Now</button>
             </div>
 
             <div class="dress-card">
-                <img class="dress-collections" src="./New Arrivals/d1.jpg" alt="">
+                <img class="dress-collections" src="casuals shirts.avif" alt="">
                 <button class="mt-5 bg-white text-black p-2 font-bold ">Shop Now</button>
             </div>
 
             <div class="dress-card">
-                <img class="dress-collections" src="./New Arrivals/d1.jpg" alt="">
+                <img class="dress-collections" src="T-shirts.avif" alt="">
                 <button class="mt-5 bg-white text-black p-2 font-bold ">Shop Now</button>
             </div>
 
             <div class="dress-card">
-                <img class="dress-collections" src="./New Arrivals/d1.jpg" alt="">
+                <img class="dress-collections" src="t-shirts 2.avif" alt="">
+                <button class="mt-5 bg-white text-black p-2 font-bold ">Shop Now</button>
+            </div>
+
+            <div class="dress-card">
+                <img class="dress-collections" src="white-shirt.avif" alt="">
                 <button class="mt-5 bg-white text-black p-2 font-bold ">Shop Now</button>
             </div>
 
@@ -162,28 +203,80 @@
         <div class="wanted-collection">
 
             <div class="mostwanted-dress">
+                <img class="mostwanted-card" src="m1.webp" alt="">
+                <p>Sale</p>
+
+                <div class="likebutton">
+                    <span class="heartempty" ><i class="fa-regular fa-heart"></i></span><span class="fillempty"><i class="fa-solid fa-heart"></i></span>
+                </div>
+            </div>
+
+            <div class="mostwanted-dress">
+                <img class="mostwanted-card" src="m2.webp" alt="">
+                <p>Sale</p>
+
+                <div class="likebutton">
+                    <span class="heartempty" ><i class="fa-regular fa-heart"></i></span><span class="fillempty"><i class="fa-solid fa-heart"></i></span>
+                </div>
+            </div>
+
+            <div class="mostwanted-dress">
+                <img class="mostwanted-card" src="m3.webp" alt="">
+                <p>Sale</p>
+
+                <div class="likebutton">
+                    <span class="heartempty" ><i class="fa-regular fa-heart"></i></span><span class="fillempty"><i class="fa-solid fa-heart"></i></span>
+                </div>
+            </div>
+
+            <div class="mostwanted-dress">
+                <img class="mostwanted-card" src="m4.webp" alt="">
+                <p>Sale</p>
+
+                <div class="likebutton">
+                    <span class="heartempty" ><i class="fa-regular fa-heart"></i></span><span class="fillempty"><i class="fa-solid fa-heart"></i></span>
+                </div>
+            </div>
+
+            <div class="mostwanted-dress">
+                <img class="mostwanted-card" src="m5.webp" alt="">
+                <p>Sale</p>
+
+                <div class="likebutton">
+                    <span class="heartempty"><i class="fa-regular fa-heart"></i></span><span class="fillempty"><i class="fa-solid fa-heart"></i></span>
+                </div>
+            </div>
+
+            <div class="mostwanted-dress">
+                <img class="mostwanted-card" src="m6.webp" alt="">
+                <p>Sale</p>
+
+                <div class="likebutton">
+                    <span class="heartempty"><i class="fa-regular fa-heart"></i></span><span class="fillempty"><i class="fa-solid fa-heart"></i></span>
+                </div>
+
+            </div>
+
+            <div class="mostwanted-dress">
                 <img class="mostwanted-card" src="./Most wanted/m1.webp" alt="">
                 <p>Sale</p>
+
+                <div class="likebutton">
+                    <span class="heartempty"><i class="fa-regular fa-heart"></i></span><span class="fillempty"><i
+                            class="fa-solid fa-heart"></i></span>
+                </div>
+
             </div>
 
             <div class="mostwanted-dress">
                 <img class="mostwanted-card" src="./Most wanted/m2.jpg" alt="">
                 <p>Sale</p>
-            </div>
 
-            <div class="mostwanted-dress">
-                <img class="mostwanted-card" src="./Most wanted/m3.jpeg" alt="">
-                <p>Sale</p>
-            </div>
+                <div class="likebutton">
+                    <span class="heartempty"><i class="fa-regular fa-heart"></i></span><span class="fillempty"><i
+                            class="fa-solid fa-heart"></i></span>
+                </div>
 
-            <div class="mostwanted-dress">
-                <img class="mostwanted-card" src="./Most wanted/m1.webp" alt="">
-                <p>Sale</p>
-            </div>
-
-            <div class="mostwanted-dress">
-                <img class="mostwanted-card" src="./Most wanted/m2.jpg" alt="">
-                <p>Sale</p>
             </div>
         </div>
     </div>
@@ -192,7 +285,7 @@
     <div class="limited-offer">
 
         <div class="offer">
-            <img src="offer.webp" alt="">
+            <img src="Banner.webp" alt="">
         </div>
 
         <div class="offer-section">
@@ -237,6 +330,8 @@
     </div>
 </div>
 
+
+<script src="script.js"></script>
 </body>
 
 </html>

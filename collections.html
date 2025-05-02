@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nostra</title>
+
+    <!-- tailwind CSS CDN Link  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+
+
+    <!-- Css Link  -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- CDN Link  -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        .containers {
+
+            width: 80%;
+            margin: 30px auto;
+         
+            background: rgb(205, 203, 203);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+        }
+
+        .filter-buttons {
+       
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            flex: 1;
+            border-radius: 6px;
+
+        }
+        .product-name{
+            text-align: center;
+        }
+
+        .filter-buttons h1 {
+            font-weight: bold;
+            font-size: large;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .filter-buttons button {
+            background-color: rgb(100, 52, 143);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            padding: 10px;
+            font-weight: lighter;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        .filter-buttons :hover {
+            background-color: rgb(43, 14, 69);
+        }
+
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            flex: 4;
+        }
+
+        .product {
+            display: inline-block;
+            width: 200px;
+            margin: 10px;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            background: white;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .product:hover {
+            transform: scale(1.05);
+        }
+
+        .product img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .product-name {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+ <!-- Responsive Nav Bar -->
+
+ <nav id="navbar" class="flex justify-between items-center">
+    <h1 class="p-5 font-bold text-2xl">Nostra</h1>
+
+    <svg id="menuicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 w-5 h-6 m-5 md:hidden">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+      </svg>
+      
+
+    <ul class="flex gap-20 p-5 mr-8 text-gray-600 hidden md:flex">
+        <li>
+            <a class=" hover:underline hover:text-black " href="index.html">Home</a>
+        </li>
+
+        <li>
+            <a class=" hover:underline hover:text-black " href="#">New Arrival</a>
+        </li>
+
+        <li>
+            <a class="hover:underline hover:text-black " href="#">Most Wanted</a>
+        </li>
+
+        <li>
+            <a class=" hover:underline hover:text-black " href="collections.html">Collection</a>
+        </li>
+
+        <li>
+            <a class=" hover:underline hover:text-black " href="contact.html">Contact Us</a>
+        </li>
+    </ul>
+</nav>
+
+<!-- Side Nav bar -->
+
+<section id="sidenav" class="bg-black fixed z-20  top-0 transition-all duration-1000 " style="width: 50%; height: 100vh; left: -50%;">
+
+    <div class="text-right text-white p-5 ">
+        <p id="closenav" class="inline cursor-pointer">X</p>
+    </div>
+    <ul class="flex flex-col items-center gap-10  p-5 mr-8 text-white   " style="" >
+        <li>
+            <a class=" hover:underline hover:text-black " href="index.html">Home</a>
+        </li>
+
+        <li>
+            <a class=" hover:underline hover:text-black " href="#">New Arrival</a>
+        </li>
+
+        <li>
+            <a class="hover:underline hover:text-black " href="#">Most Wanted</a>
+        </li>
+
+        <li>
+            <a class=" hover:underline hover:text-black " href="collections.html">Collections</a>
+        </li>
+
+        <li>
+            <a class=" hover:underline hover:text-black " href="contact.html">Contact Us</a>
+        </li>
+    </ul>
+</section>
+
+
+
+
+    <!-- Products  -->
+
+    <div class="containers">
+
+        <div class="filter-buttons">
+            <h1>Product Filters</h1>
+            <button onclick="filterProducts('all')">All</button>
+            <button onclick="filterProducts('shirts')">Shirts</button>
+            <button onclick="filterProducts('trowser')">Trowser</button>
+            <button onclick="filterProducts('t-shirts')">T-shirts</button>
+        </div>
+
+        <div class="product-list" id="product-list">
+
+            <div class="product" data-category="shirts">
+                <img src="white-shirt.avif" alt="">
+                <div class="product-name">White Shirt</div>
+            </div>
+
+            <div class="product" data-category="t-shirts">
+                <img src="T-shirts.avif" alt="">
+                <div class="product-name">T-Shirt</div>
+            </div>
+
+            <div class="product" data-category="shirts">
+                <img src="casuals shirts.avif" alt="">
+                <div class="product-name">Casual Shirt</div>
+            </div>
+
+            <div class="product" data-category="shirts">
+                <img src="Tops.avif" alt="">
+                <div class="product-name">Tops for Women</div>
+            </div>
+
+            <div class="product" data-category="trowser">
+                <img src="Tousers 2.webp" alt="">
+                <div class="product-name">Trousers</div>
+            </div>
+
+            <div class="product" data-category="t-shirts">
+                <img src="black.avif" alt="">
+                <div class="product-name">Black T-shirt</div>
+            </div>
+
+            <div class="product" data-category="trowser">
+                <img src="trousers.webp" alt="">
+                <div class="product-name">Trousers</div>
+            </div>
+
+            <div class="product" data-category="t-shirts">
+                <img src="white-shirt.avif" alt="">
+                <div class="product-name">White Shirt</div>
+            </div>
+
+
+            <div class="product" data-category="trowser">
+                <img src="Tousers 3.webp" alt="">
+                <div class="product-name">Trousers</div>
+            </div>
+
+
+            <div class="product" data-category="shirts">
+                <img src="Funcky.avif" alt="">
+                <div class="product-name">Funcky</div>
+            </div>
+
+            <div class="product" data-category="trowser">
+                <img src="Army trowser.webp" alt="">
+                <div class="product-name">Army Trowser</div>
+            </div>
+
+            <div class="product" data-category="t-shirts">
+                <img src="itachi T-shirt.jpg" alt="">
+                <div class="product-name">Itachi T-shirt</div>
+            </div>
+
+            
+
+
+        </div>
+
+
+    </div>
+
+    <!-- Footer Section -->
+
+    <div class="footer-section">
+        <div class="footer-sectionone">
+            <h1 class="font-bold text-3xl p-5 text-white">Nostra</h1>
+            <p class="font-semibold text-2xl p-5 text-white">The Standard chunk of Lorem ipsum used since the 1500s is
+                reprodused below for those <br> interest</p>
+        </div>
+        <div class="footer-sectiontwo">
+
+            <div class="icons">
+                <i class="fa-brands fa-instagram" style="color: #ffffff; margin-right: 10px;"></i>
+                <i class="fa-brands fa-twitter" style="color: #ffffff; margin-right: 10px;"></i>
+                <i class="fa-brands fa-facebook" style="color: #ffffff; margin-right: 10px;"></i>
+
+            </div>
+
+        </div>
+
+        <div class="footer-sectionthree">
+            <p class="font-semibold text-2xl p-5 text-white">@ 2023 Nostra.com</p>
+        </div>
+    </div>
+
+    <script>
+
+       function filterProducts(category){
+        let product = document.querySelectorAll(".product");
+
+        product.forEach((p) => {
+            if(
+                category === "all" ||
+                p.getAttribute("data-category") === category
+            ) {
+                p.style.display = "inline-block";
+            } else{
+                p.style.display = "none";
+            }
+        });
+       }
+
+       // Side Nav bar , Menu Icon
+
+var sidenav =document.getElementById("sidenav");
+var menuicon = document.getElementById("menuicon");
+var closenav = document.getElementById("closenav")
+
+menuicon.addEventListener("click",function(){
+    sidenav.style.left=0
+})
+
+closenav.addEventListener("click",function(){
+    sidenav.style.left="-50%"
+})
+
+
+    </script>
+
+
+</body>
+
+</html>
