@@ -1,31 +1,36 @@
-body{
+body {
     padding: 0;
     margin: 0;
 }
 
 
-#navbar{
+#navbar {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.bg{
+.bg-image {
+    width: 100%;
+}
+
+.bg {
     width: 95%;
     height: 500px;
     border-radius: 1%;
     margin: 10px;
     margin-left: 2%;
-    
+
 }
-.bgtext{
+
+.bgtext {
     text-align: center;
     position: absolute;
     top: 40%;
     left: 24%;
-    
+
     color: white;
 }
 
-.bg-slide{
+.bg-slide {
     display: flex;
     justify-content: space-between;
     padding-left: 10%;
@@ -34,35 +39,36 @@ body{
     top: 50%;
     gap: 1000px;
     left: 7%;
-    
+
 }
 
-.brand{
+.brand {
     display: flex;
     justify-content: space-around;
-    
-}
-.brandimg{
-    width: 10%;
-    height: 30%;
-   
+
 }
 
-.textcontainer{
+.brandimg {
+    width: 10%;
+    height: 30%;
+
+}
+
+.textcontainer {
     display: flex;
     justify-content: space-between;
     padding: 10px;
     margin: 10px;
 }
 
-.text-section{
+.text-section {
     display: flex;
     justify-content: space-between;
     margin-left: 10px;
     margin-right: 10px;
 }
 
-.product-text{
+.product-text {
     background-color: rgb(164, 158, 158);
     color: black;
     width: 300px;
@@ -71,22 +77,40 @@ body{
     margin: 10px;
 }
 
-.dress-card{
-    width: 17%;
-    height: 300px;
+.new-arrival {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 230px);
+    gap: 20px;
+    justify-content: center;
+}
+
+.dress-card {
+    /* flex-grow: 2;
+    flex-basis: 40%;
+    margin: 10px;
+    /* width: 17%;
+    height: 300px; */
+
     position: relative;
 
-    
-   
+
+
 }
-.dress-card img{
-    width: 100%;
-    height: 100%;
+
+.dress-section {}
+
+.dress-card img {
+    /* width: 100%;
+    height: 70%;
     border-radius: 10px;
-    margin: 10px;
-    
+    margin: 10px; */
+    width: 300px;
+    height: 400px;
+
 }
-.dress-card button{
+
+.dress-card button {
     border-radius: 5px;
     position: absolute;
     padding: 10px;
@@ -94,18 +118,20 @@ body{
     left: 35%;
 }
 
-.new-arrival{
+.new-arrival {
+    /*    
     display: flex;
     justify-content: space-evenly;
     margin: 10px;
-    flex-grow: 1;
+    flex: 0 0 auto;
+    flex-grow: 1; */
 }
 
 
 /* m W */
 
 
-.mostwanted-dress img{
+.mostwanted-dress img {
     width: 100%;
     height: 100%;
     border-radius: 5px;
@@ -113,7 +139,8 @@ body{
 
     border: solid black 1px;
 }
-.mostwanted-dress p{
+
+.mostwanted-dress p {
     position: absolute;
     background-color: red;
     color: white;
@@ -123,7 +150,8 @@ body{
     border-radius: 5px;
     left: 4%;
 }
-.wanted-collection{
+
+.wanted-collection {
     display: flex;
     justify-content: space-evenly;
     margin: 10px;
@@ -134,35 +162,83 @@ body{
     gap: 30px;
     height: 330px;
 }
-.wanted-collection::-webkit-scrollbar{
+
+.wanted-collection::-webkit-scrollbar {
     width: 0;
 
-    
+
     /* height: 0; */
 }
-.mostwanted-dress{
+
+.mostwanted-dress {
     width: 17%;
     height: 300px;
     flex: 0 0 auto;
-   
+
     position: relative;
+}
+
+@media screen and (max-width:600px) {
+    .wanted-collection {
+        display: flex;
+        overflow-x: auto;
+        gap: 20px;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 10px;
+      
+    }
+
+    .mostwanted-dress {
+        flex: 0 0 auto;
+        width: 230px;
+       
+      
+
+    }
+
+    .wanted-collection::-webkit-scrollbar {
+        height: 0;
+    }
+
+    .likebutton {
+        position: absolute;
+        top: 250px;
+        left: 200px;
+        margin-left: 5%;
+        margin-top: 5%;
+       
+        z-index: 1;
+        font-size: 2vw;
+    }
+    .fillempty {
+        display: none;
+        color: red;
+
+    }
+
+    .letter button{
+        font-size: medium;
+       
+    }
 }
 
 
 
-.likebutton{
+.likebutton {
     position: absolute;
     top: 250px;
     left: 200px;
     z-index: 1;
     font-size: 2vw;
 }
+
 .fillempty {
     display: none;
     color: red;
 }
 
-.limited-offer{
+.limited-offer {
 
     width: 100%;
     height: 350px;
@@ -170,62 +246,70 @@ body{
     margin-top: 25px;
 
 }
-.offer{
+
+.offer {
     width: 25%;
     height: 180px;
     position: relative;
 }
-.offer img{
+
+.offer img {
     margin-left: 300px;
     position: absolute;
     top: 25%;
 
 }
-.offer-section{
+
+.offer-section {
     margin-left: 800px;
 }
-.offer-section button{
+
+.offer-section button {
     border-radius: 5px;
     background-color: white;
     padding: 10px;
     margin-top: 10px;
-    
+
 }
-.offer-section p{
+
+.offer-section p {
     margin-top: 10px;
 }
 
-.letter-section{
+.letter-section {
     text-align: center;
     margin-top: 10px;
     padding: 10px;
 }
 
-.letter-section p{
+.letter-section p {
     margin-top: 10px;
 }
 
-.letter button{
+.letter button {
     border-radius: 5px;
     background-color: rgb(43, 14, 69);
     color: white;
     padding: 15px;
-    margin-top: 10px;
-    margin-left: 725px;
-   
+    /* margin-top: 10px;
+    margin-left: 725px; */
+    margin-left: 46%;
+
 }
 
-.footer-section{
+.footer-section {
     background-color: rgb(43, 14, 69);
     width: 100%;
     height: 290px;
     margin-top: 10px;
 }
-.footer-sectiontwo{
+
+.footer-sectiontwo {
     display: flex;
-  
+
 }
-.icons{
+
+.icons {
     padding: 10px;
     display: flex;
     margin-left: 10px;
@@ -284,17 +368,17 @@ body{
     background-color: rgb(43, 14, 69);
 }
 
-.products{
+.products {
     display: flex;
     margin-top: 30px;
     gap: 10px;
     padding: 10px;
     flex-wrap: wrap;
     justify-content: space-around;
-   
+
 }
 
-.product-box{
+.product-box {
     flex-basis: 20%;
     width: 17%;
     height: 350px;
@@ -304,11 +388,89 @@ body{
     border-radius: 5px;
     margin-top: 40px;
 }
-.product-box p{
+
+.product-box p {
     margin-top: 5px;
 }
 
 
 /* ul li a:hover{
     color: blueviolet;
+} */
+
+
+/* Media Queries */
+
+@media screen and (max-width:600px) {
+    body {
+        font-size: 5px;
+    }
+
+    .bg-image img {
+        height: 350px;
+    }
+
+    .bgtext h1 {
+        font-size: 25px;
+    }
+
+    .bgtext h2 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .textcontainer {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bgtext button {
+        padding: 5px;
+        border-radius: 5px;
+        font-size: 12px;
+    }
+
+    .bg-image img {
+        width: 100%;
+    }
+
+    .brands-section h1 {
+        text-align: center;
+    }
+
+    .text-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .product-text {
+        width: 90%;
+    }
+
+    .product-text h1 {
+        font-size: large;
+    }
+
+    .product-text p {
+        font-size: medium;
+    }
+
+    .dress-card {
+
+        flex-basis: 80%;
+    }
+
+    .limited-offer {
+        display: none;
+    }
+}
+
+/* responsive navbar */
+/* @media screen and (max-width:600px) {
+    li ul a{
+        font-size: 34px;
+    }
 } */
